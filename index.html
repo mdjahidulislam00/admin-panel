@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/eb2f6988cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline"> <i>AdminPanel</i> </span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0">
+                                <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-gauge"></i> <span class="ms-1 d-none d-sm-inline">Dashboard <i class="fa-solid fa-caret-down"></i></span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100 hover">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Dashboard</span> 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Dashboard</span> 2 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fa-solid fa-people-arrows"></i> <span class="ms-1 d-none d-sm-inline">Customers <i class="fa-solid fa-caret-down"></i></span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">GoodCustomers</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">GoodCustomers</span> 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fa-brands fa-product-hunt"></i><span class="ms-1 d-none d-sm-inline">Products <i class="fa-solid fa-caret-down"></i></span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu4" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-wrench"></i><span class="ms-1 d-none d-sm-inline">Utilities <i class="fa-solid fa-caret-down"></i></span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu4" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline me-1">Color</span><i class="fa-solid fa-palette"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline me-1">Border</span><i class="fa-solid fa-border-all"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline me-1">Animation</span><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                    <hr>
+                    <!-- admin login profile -->
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/formal.jpg" alt="jahid" width="30" height="30" class="rounded-circle me-3">
+                            <span class="d-none d-sm-inline mx-1">Jahid</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- main-container -->
+            <div class="col py-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col navbar bg-light topbar mb-4 sticky-top shadow">
+                            <form class="d-flex">
+                                <input class="form-control me-1" type="search" placeholder="Search here" aria-label="Search">
+                                <button class="btn btn-outline-success " type="submit"><i class="fa-solid fa-magnifying-glass fa-1x"></i></button>
+                            </form>
+                            <ul class="navbar nav navbar-expanded-lg ml-auto me-1">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa-solid fa-bell fa-lg"></i><sup style="color:red">9+</sup>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa-solid fa-message fa-lg"></i><sup style="color:red">9+</sup>
+                                    </a>
+                                </li>
+                                <li class="nav-item bg-dark rounded-circle " id="jahid">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa-sharp fa-solid fa-moon fa-lg"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>    
+                    </div>
+                    <!-- main body content -->
+                    <div class="row" id="body-content">
+                        <div class="content-header">
+                            <span style="color:rgb(9, 226, 9); font-size:30px"><b>Dashboard</b></span>
+                        </div>
+                        <!-- Cards -->
+                        <div class="row mb-3">
+                            <div class="col-lg-3 col-md-4 col-sm-12  mb-2">
+                                <div class="small-box bg-success rounded">
+                                    <div class="inner pt-3 px-2">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2>200</h2>
+                                                <p>New Order</p>
+                                            </div>
+                                            <div class="col-5">
+                                                <span><i class="fa-solid fa-bag-shopping fa-3x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-warning text-center">
+                                        <a class="text-decoration-none text-dark a-hover" href="#">
+                                            <b>more</b> 
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-12 mb-2">
+                                <div class="small-box bg-info rounded">
+                                    <div class="inner pt-3 px-2">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2>300</h2>
+                                                <p>Bounce Rate</p>
+                                            </div>
+                                            <div class="col-5 p-1">
+                                                <span><i class="fa-solid fa-percent fa-3x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-warning text-center">
+                                        <a class="text-decoration-none text-dark" href="#">
+                                            <b>more</b> 
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-12 mb-2">
+                                <div class="small-box bg-danger rounded"> 
+                                    <div class="inner pt-3 px-2">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2>400</h2>
+                                                <p>Uer Register</p>
+                                            </div>
+                                            <div class="col-5 p-1">
+                                                <span><i class="fa-solid fa-user-plus fa-3x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-warning text-center">
+                                        <a class="text-decoration-none text-dark" href="#">
+                                            <b>more</b> 
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-12 mb-2">
+                                <div class="small-box bg-secondary rounded">
+                                    <div class="inner pt-3 px-2">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2>500</h2>
+                                                <p>Unique Visitor</p>
+                                            </div>
+                                            <div class="col-5 p-1">
+                                                <span><i class="fa-solid fa-user-check fa-3x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-warning text-center">
+                                        <a class="text-decoration-none text-dark" href="#">
+                                               <b>more</b> 
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- lineChart -->
+                        <div class="row mb-2">
+                            <div class="col-lg-8 col-md-8 col-sm-12 mb-2">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Earnings Overview</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chartjs-size-monitor p-1">
+                                            <canvas id="lineChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Doughnut Chart Component -->
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="card" >
+                                    <div class="card-header">
+                                        <h5>Earnings Overview</h5>
+                                    </div>
+                                    <div class="card-body my-lg-3">
+                                        <div class="chartjs-size-monitor p-1">
+                                            <canvas id="doughnutChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-7 col-md-7 col-sm-12 mb-sm-2 mb-2">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Service</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="font-weight bold">Percentage <span class="float-end">25%</span></p>
+                                        
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-weight bold">Percentage <span class="float-end">45%</span></p>
+                                        
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-weight bold">Percentage <span class="float-end">50%</span></p>
+                                        
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <div class="card py-2">
+                                    <div class="card-header">
+                                        <h5>Bar Chart</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="barChart"></canvas>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-7 col-md-7 col-sm-6 mb-2">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Message</h5>
+                                    </div>
+                                    <div class="card-body pt-5">
+                                        <ol class="list-group list-group-numbered">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                              <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Subheading</div>
+                                                Cras justo odio
+                                              </div>
+                                              <span class="badge bg-primary rounded-pill">14</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                              <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Subheading</div>
+                                                Cras justo odio
+                                              </div>
+                                              <span class="badge bg-primary rounded-pill">14</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                              <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Subheading</div>
+                                                Cras justo odio
+                                              </div>
+                                              <span class="badge bg-primary rounded-pill">14</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                  <div class="fw-bold">Subheading</div>
+                                                  Cras justo odio
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill">14</span>
+                                              </li>
+                                          </ol>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Messages</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                              <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">List group item heading</h5>
+                                                <small>3 days ago</small>
+                                              </div>
+                                              <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                              <small>And some small print.</small>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                              <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">List group item heading</h5>
+                                                <small class="text-muted">3 days ago</small>
+                                              </div>
+                                              <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                              <small class="text-muted">And some muted small print.</small>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                              <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">List group item heading</h5>
+                                                <small class="text-muted">3 days ago</small>
+                                              </div>
+                                              <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                              <small class="text-muted">And some muted small print.</small>
+                                            </a>
+                                          </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer container-fluid text-center bg-dark ">
+        <div class="container-fluid">
+            <h6 style="color:white">&copy; 2022 adminPanel.com</h6>
+        </div>
+    </div>
+
+            
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js'></script>
+    <script src="chart1.js"></script>
+    <!-- <script src="chart2.js"></script> -->
+</body>
+</html>
